@@ -4,8 +4,8 @@ const mongoose = require('mongoose')
 const PORT = process.env.PORT || 3000
 
 mongoose.connect(process.env.MONGO_URI)
-mongoose.connection.once('open', () => console.log('Mongo is showing love'))
+mongoose.connection.once('open', () => console.log('Genghis Khan Mongolian invasion here we comeeeeeeee fam'))
 
 app.listen(PORT, () => {
-    console.log(`We in the building ${PORT}`)
+    console.log(`Andre ${PORT} - caroline, shes the reason for the word witch ;) `)
 })
