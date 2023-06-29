@@ -15,5 +15,6 @@ Javascript, dotenv, ERD Charts, jest, supertest, morgan, artillery
 - sudo npm i brcrypt dotenv express mongoose nodemon morgan 
 - then// sudo npm i --save-dev artillery jest mongodb-memory-server@8.12.2 supertest
 - download post man as well
-- sign up for mongodb database make sure your server accept all ip address by putting0.0.0 
+- sign up for mongodb database make sure your server accept all ip address by putting0.0.0
 - also install vscode 
+- 

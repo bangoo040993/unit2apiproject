@@ -4,6 +4,7 @@ const { MongoMemoryServer } = require('mongodb-memory-server')
 const app  = require('../app')
 const server = app.listen(8080, () => console.log('Testing on PORT 8080'))
 const User = require('../models/userModel')
+let mongoServer;
 
 beforeAll(async () => {
     mongoServer = await MongoMemoryServer.create()
@@ -11,43 +12,57 @@ beforeAll(async () => {
   })
 
 afterAll(async ()=>{
-  await mongoose.connection.close() // programmatic ctrl+c
-  mongoServer.stop() //getting rid of our MongoDB instance itself
+  await mongoose.connection.close() 
+  mongoServer.stop()
   server.close()
 })
 describe('POST /users', () => {
-    it('should create a new user', async () => {
-        const user = {
-          name: 'John Doe',
-          email: 'johndoe@example.com',
-          password: 'password123'
-        };
-    
-        const response = await request(app)
-          .post('/users')
-          .send(user);
-    
-        expect(response.status).toBe(201);
-        expect(response.body.message).toBe('User created successfully');
-    
-        const createdUser = await User.findOne({ email: user.email });
-        expect(createdUser).toBeDefined();
-        expect(createdUser.name).toBe(user.name);
-        expect(createdUser.email).toBe(user.email);
-        expect(createdUser.password).not.toBe(user.password);
+  it('should create a new user', async () => {
+   const user = {
+    name: 'McAfee',
+    email: 'iDidNotKMS@gmail.com',
+    password: 'sameforepstein'
+   };
+    const response = await request(app)
+      .post('/users')
+      .send(user);
+    expect(response.status).toBe(201);
+    expect(response.body.message).toBe('User created successfully');
+    const createdUser = await User.findOne({ email: user.email });
+    expect(createdUser).toBeDefined();
+    expect(createdUser.name).toBe(user.name);
+    expect(createdUser.email).toBe(user.email);
+    expect(createdUser.password).not.toBe(user.password);
+  });
+});
+
+describe('GET /users/:id', () => {
+  it('should get a user by id', async () => {
+    const user = new User({
+      name: 'McAfee',
+      email: 'iDidNotKMS1@gmail.com',
+      password: 'sameforepstein'
       });
-    })
-    //   it('should return an error if required fields are missing', async () => {
-    //     const user = {
-    //       email: 'johndoe@example.com',
-    //       password: 'password123'
-    //     };
-    
-    //     const response = await request(app)
-    //       .post('/users')
-    //       .send(user);
-    
-    //     expect(response.status).toBe(400);
-    //     expect(response.body.message).toBe('User validation failed: name: Path `name` is required');
-    //   });
-    // });
+    await user.save();
+  
+    const response = await request(app).get(`/users/${user._id}`);
+  
+    expect(response.status).toBe(200);
+    expect(response.body.message).toBe('User retrieved successfully');
+    expect(response.body.user.name).toBe('McAfee');
+    expect(response.body.user.email).toBe('iDidNotKMS1@gmail.com');
+    });
+});
+
+
+describe('GET /users', () => {
+  it('should return all users', async () => {
+    const response = await request(app)
+    .get('/users');
+    console.log(response.body)
+    expect(response.body.message).toBe('we in Neo')
+  });
+});
+
+
+
