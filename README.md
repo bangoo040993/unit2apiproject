@@ -17,4 +17,7 @@ Javascript, dotenv, ERD Charts, jest, supertest, morgan, artillery
 - download post man as well
 - sign up for mongodb database make sure your server accept all ip address by putting0.0.0
 - also install vscode 
+- create a file call .env
+- inside env you should have something like this  MONGO_URI=mongodb+srv://node-shop:<password>p@cluster0.swixbpg.mongodb.net/<nameofcollection>?retryWrites=true&w=majority
+    SECRET=<sha256> you can get this with sha256 generator 
 - 
