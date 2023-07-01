@@ -21,3 +21,10 @@ Javascript, dotenv, ERD Charts, jest, supertest, morgan, artillery
 - inside env you should have something like this  MONGO_URI=mongodb+srv://node-shop:<password>p@cluster0.swixbpg.mongodb.net/<nameofcollection>?retryWrites=true&w=majority
     SECRET=<sha256> you can get this with sha256 generator 
 - 
+
+
+
+####  note to self
+- should have done this in the begining but never lates than never? 
+- july 1 going instead of having to manually putting in the userid i need to have the user to create a new cart
+- july 1 make a wish list and favorites array for user and 
