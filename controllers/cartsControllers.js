@@ -3,30 +3,31 @@ const User = require('../models/userModel')
 const Item = require('../models/itemModel')
 
 
-exports.createCart = async (req, res) => {
+exports.createCart = async ( req, res) => {
     try {
-      const { item, user } = req.body;
-      const cart = new Cart({ item, user });
-      await cart.save();
-      res.status(201).json(cart);
-    } catch (err) {
-      res.status(500).json({ error: err.message });
+        req.body.user = req.user._id
+        const cart = await Cart.create(req.body)
+        req.user.cart = {_id: cart._id}
+        await req.user.save()
+        res.json(cart)
+    } catch (error) {
+        res.status(400).json({ message: error.message}) 
     }
-  };
+}
 
   exports.getOneCart = async (req, res) => {
     try {
     const oneCart = await Cart.findOne({ _id: req.params.id });
     res.json({ 
         message: 'Item retrieved successfully',
-        item: oneCart,
+        cart: oneCart,
         seeAllItems: {
             type: 'GET',                                              //coolest shit EVER
-            url: 'http://localhost:3000/items/'
+            url: 'http://localhost:3000/carts/'
         },
         createNewItem: {
             type: 'POST',
-            url: 'http://localhost:3000/items/create'
+            url: 'http://localhost:3000/carts/create'
         }
     });
     } catch (error) {
@@ -34,39 +35,48 @@ exports.createCart = async (req, res) => {
     }
 };
 
-// exports.indexComplete = async function (req, res){
-//     try{
-//         const todos = await Todo.find({ completed: true, user: req.user._id })
-//         res.json(todos)
-//     } catch(error){
-//         res.status(400).json({ message: error.message })
-//     }
-// }
-
-// exports.indexNotComplete = async function (req, res){
-//     try{
-//         const todos = await Todo.find({ completed: false,  user: req.user._id })
-//         res.json(todos)
-//     } catch(error){
-//         res.status(400).json({ message: error.message })
-//     }
-// }
-
-// exports.update = async function(req, res){
-//     try{
-//         const todo = await Todo.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
-//         res.json(todo)
-//     } catch(error){
-//         res.status(400).json({ message: error.message })
-//     }
-// }
 
 
-// exports.delete = async function(req, res){
-//     try{
-//         const todo = await Todo.findOneAndDelete({ _id: req.params.id })
-//         res.sendStatus(204)
-//     } catch(error){
-//         res.status(400).json({ message: error.message })
-//     }
-// }
+exports.getAllCarts = async (req, res) => {
+    try {
+    const foundCarts = await Cart.find({});
+    res.json({ message: 'we in Neo',
+        cart: foundCarts.map(doc => {
+            return {
+                item: doc.item, 
+                cart: doc._id,
+                request: {
+                    type: 'GET',                                              //coolest shit EVER
+                    url: 'http://localhost:3000/carts/' + doc._id
+                }
+            }
+        }) 
+    });
+    } catch (error) {
+    res.status(400).json({ message: error.message });
+    }
+ };
+
+
+
+exports.addItemToCart = async (req, res) => {
+    try {
+      const itemId = req.body.item
+      console.log("🚀 ~ file: cartsControllers.js:75 ~ exports.addItemToCart= ~ itemId:", itemId)
+      const cartId = req.params.id
+      console.log("🚀 ~ file: cartsControllers.js:77 ~ exports.addItemToCart= ~ cartId:", cartId)
+      const item = await Item.findOne({ _id: itemId })
+      if (!item) {
+        return res.status(404).json({ message: 'Item not found' })
+      }
+      const cart = await Cart.findOne({ _id: cartId })
+      if (!cart) {
+        return res.status(404).json({ message: 'Cart not found' })
+      }
+      cart.item.push(item);
+      await cart.save()
+      res.json({ message: 'Item(s) added to cart successfully' })
+    } catch (error) {
+      res.status(400).json({ message: error.message })
+    }
+  }
