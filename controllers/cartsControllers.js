@@ -62,9 +62,7 @@ exports.getAllCarts = async (req, res) => {
 exports.addItemToCart = async (req, res) => {
     try {
       const itemId = req.body.item
-      console.log("🚀 ~ file: cartsControllers.js:75 ~ exports.addItemToCart= ~ itemId:", itemId)
       const cartId = req.params.id
-      console.log("🚀 ~ file: cartsControllers.js:77 ~ exports.addItemToCart= ~ cartId:", cartId)
       const item = await Item.findOne({ _id: itemId })
       if (!item) {
         return res.status(404).json({ message: 'Item not found' })
@@ -80,3 +78,15 @@ exports.addItemToCart = async (req, res) => {
       res.status(400).json({ message: error.message })
     }
   }
+
+  exports.deleteCart = async (req, res) => {
+    try {
+        const foundCart = await Cart.findOne({ _id: req.params.id });
+        console.log(foundCart)
+        await foundCart.deleteOne()
+        res.json({ message: 'Cart deleted successfully'});
+    } catch (error) {
+        
+        res.status(400).json({ message: error.message,})
+    }
+}

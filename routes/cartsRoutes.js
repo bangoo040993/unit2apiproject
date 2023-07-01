@@ -7,5 +7,5 @@ router.post('/create', usersController.auth, cartsController.createCart)//workin
 router.get('/:id', usersController.auth, cartsController.getOneCart)//working
 router.get('/', cartsController.getAllCarts)//working
 router.put('/:id/edit', usersController.auth, cartsController.addItemToCart)//working
-
+router.delete('/:id/delete', usersController.auth, cartsController.deleteCart )
 module.exports = router 
