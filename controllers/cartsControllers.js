@@ -79,12 +79,14 @@ exports.addItemToCart = async (req, res) => {
     }
   }
 
+
+
   exports.deleteCart = async (req, res) => {
     try {
         const foundCart = await Cart.findOne({ _id: req.params.id });
         console.log(foundCart)
         await foundCart.deleteOne()
-        res.json({ message: 'Cart deleted successfully'});
+        res.json({ message: 'CART deleted successfully'});
     } catch (error) {
         
         res.status(400).json({ message: error.message,})

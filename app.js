@@ -12,7 +12,3 @@ app.use('/items', itemsRoutes)
 app.use('/carts', cartRoutes)
 module.exports = app
 
-// //{
-// "title": "5",
-// "completed": true
-// }

@@ -7,5 +7,5 @@ mongoose.connect(process.env.MONGO_URI)
 mongoose.connection.once('open', () => console.log('Genghis Khan Mongolian invasion here we comeeeeeeee fam'))
 
 app.listen(PORT, () => {
-    console.log(`Andre ${PORT} - caroline, shes the reason for the word witch ;) `)
+    console.log(`Andre ${PORT} - caroline, shes the reason for the word witch  `)
 })
