@@ -26,5 +26,5 @@ Javascript, dotenv, ERD Charts, jest, supertest, morgan, artillery
 
 ####  note to self
 - should have done this in the begining but never lates than never? 
-- july 1 going instead of having to manually putting in the userid i need to have the user to create a new cart
+- july 1 going instead of having to manually putting in the userid i need to have the user to create a new cart -done july 1
 - july 1 make a wish list and favorites array for user and 
