@@ -23,6 +23,14 @@ Javascript, dotenv, ERD Charts, jest, supertest, morgan, artillery
 - 
 
 
+### Challenges
+
+- When creating or editing names of certain files, there are errors that you can't easily undo. In such cases, it is often best to delete those files and start anew. 
+- I had to perform a hard reset on my project twice due to issues with GitHub. I made a big mistake when attempting to dry test cloning, and I learned the importance of always changing the directory before cloning. 
+- It's easy to get tunnel vision and focus solely on one problem at a time, which can occasionally yield positive results. However, most of the time, it delays progress on the entire project.
+- Don't get too ahead of yourself. Use the time you save to learn more, understand more, or theoretically test certain aspects of things.  
+
+
 
 ####  note to self
 - should have done this in the begining but never lates than never? 
