@@ -75,11 +75,21 @@ exports.updateUser = async (req,res)=>{
  
 exports.getOneUser = async (req, res) => {
     try {
-    const oneUser = await User.findOne({ _id: req.params.id });
-    res.json({ message: 'User retrieved successfully', user: oneUser });
+        const oneUser = await User.findOne({ _id: req.params.id });
+        res.json({ message: 'User retrieved successfully', user: oneUser });
     } catch (error) {
-    res.status(400).json({ message: error.message });
+        res.status(400).json({ message: error.message });
     }
 };
 
-
+exports.deleteUser = async (req, res) => {
+    try {
+        const foundUser = await User.findOne({ _id: req.params.id });
+        console.log(foundUser)
+        await foundUser.deleteOne()
+        res.json({ message: 'User deleted successfully'});
+    } catch (error) {
+        
+        res.status(400).json({ message: error.message,})
+    }
+}
