@@ -1,6 +1,6 @@
 # unit2apiproject
 [link to trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
-details>
+<details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -20,8 +20,8 @@ details>
     <li><a href="#how-to-run">how to run</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#challenges">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#challenges">challenges</a></li>
+    <li><a href="#note-to-self">note to self</a></li>
   </ol>
 </details>
 
@@ -71,7 +71,7 @@ details>
 
 
 
-### note to self
+## note to self
 - should have done this in the begining but never lates than never? 
 - july 1 going instead of having to manually putting in the userid i need to have the user to create a new cart -done july 1
 - july 1 make a wish list and favorites array for user and 
