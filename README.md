@@ -1,11 +1,23 @@
 # unit2apiproject
 [link to trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
+<a href="#getting-started">Getting Started</a>
 
-### Technologies 
+### Technologies use
  
-Javascript, dotenv, ERD Charts, jest, supertest, morgan, artillery 
- VS Code, Postman, , Trello, MERN
-
+- JavaScript
+- dotenv
+- ERD Charts
+- jest
+- supertest
+- morgan
+- artillery
+- VS Code
+- Postman
+- Trello
+- MERN
+- sha256
+- jwt
+- bcrypt
 
 ### HOW TO RUN
 - Fork the repository 
@@ -25,7 +37,8 @@ Javascript, dotenv, ERD Charts, jest, supertest, morgan, artillery
     
 - 
 
-
+<!-- GETTING STARTED -->
+## Getting Started
 ### Challenges
 
 - When creating or editing names of certain files, there are errors that you can't easily undo. In such cases, it is often best to delete those files and start anew. 
