@@ -22,7 +22,8 @@ const itemSchema = new mongoose.Schema({
     favorite: {
         type: Boolean,
         default: false
-      }
+      },
+      orderRequest: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User'}]
 });
 
 const Item = mongoose.model('itemModel', itemSchema);

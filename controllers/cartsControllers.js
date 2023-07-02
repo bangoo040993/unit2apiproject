@@ -22,7 +22,7 @@ exports.createCart = async ( req, res) => {
         message: 'Item retrieved successfully',
         cart: oneCart,
         seeAllItems: {
-            type: 'GET',                                              //coolest shit EVER
+            type: 'GET',                                              
             url: 'http://localhost:3000/carts/'
         },
         createNewItem: {
@@ -46,7 +46,7 @@ exports.getAllCarts = async (req, res) => {
                 item: doc.item, 
                 cart: doc._id,
                 request: {
-                    type: 'GET',                                              //coolest shit EVER
+                    type: 'GET',                                              
                     url: 'http://localhost:3000/carts/' + doc._id
                 }
             }
@@ -71,8 +71,29 @@ exports.addItemToCart = async (req, res) => {
       if (!cart) {
         return res.status(404).json({ message: 'Cart not found' })
       }
-      cart.item.push(item);
+      cart.items.push(item);
       await cart.save()
+      res.json({ message: 'Item(s) added to cart successfully' })
+    } catch (error) {
+      res.status(400).json({ message: error.message })
+    }
+  }
+
+
+exports.removeItemFromCart = async (req, res) => {
+try {
+    const itemId = req.body.item
+     const cartId = req.params.id
+     const item = await Item.findOne({ _id: itemId })
+     if (!item) {
+       return res.status(404).json({ message: 'Item not found' })
+     }
+     const cart = await Cart.findOne({ _id: cartId })
+     if (!cart) {
+       return res.status(404).json({ message: 'Cart not found' })
+     }
+     cart.items.pull(itemId);
+    await cart.save()   
       res.json({ message: 'Item(s) added to cart successfully' })
     } catch (error) {
       res.status(400).json({ message: error.message })

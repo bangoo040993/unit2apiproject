@@ -29,7 +29,7 @@ exports.getOneItem = async (req, res) => {
         message: 'Item retrieved successfully',
         item: oneItem,
         seeAllItems: {
-            type: 'GET',                                              //coolest shit EVER
+            type: 'GET',                                              
             url: 'http://localhost:3000/items/'
         },
         createNewItem: {
@@ -52,7 +52,7 @@ exports.getAllItems = async (req, res) => {
                 name: doc.name, 
                 _id: doc._id,
                 request: {
-                    type: 'GET',                                              //coolest shit EVER
+                    type: 'GET',                                              
                     url: 'http://localhost:3000/items/' + doc._id
                 }
             }
