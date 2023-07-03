@@ -27,13 +27,28 @@
 
 ## Built-with
  
-- JavaScript          - dotenv
-- ERD Charts          - jest
-- supertest           - morgan
-- artillery           - VS Code
-- Postman             - Trello
-- MERN                - sha256
-- jwt                 - bcrypt
+| List             | Instructions                                                         |
+|------------------|----------------------------------------------------------------------|
+| JavaScript      | - Fork the repository                                                |
+| dotenv           | - From your repository URL, clone the code. Use    |
+| ERD Charts       | - In the terminal, assuming you have Node.js and Git installed,      |
+| jest              |   install Zsh.  
+
+
+- JavaScript
+- dotenv
+- ERD Charts
+- jest
+- supertest
+- morgan
+- artillery
+- VS Code
+- Postman
+- Trello
+- MERN
+- sha256
+- jwt
+- bcrypt
 
 ### HOW TO RUN
 - Fork the repository 
