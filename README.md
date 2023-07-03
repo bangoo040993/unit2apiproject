@@ -27,10 +27,10 @@
 
 ## Built-with
  
-| List             | Instructions                                                         |
-|------------------|----------------------------------------------------------------------|
-| JavaScript      | - Fork the repository                                                |
-| dotenv           | - From your repository URL, clone the code. Use    |
+| List             | Instructions                                                         | test |
+|------------------|----------------------------------------------------------------------| test |
+| JavaScript      | - Fork the repository                                                | test |
+| dotenv           | - From your repository URL, clone the code. Use    | test |
 | ERD Charts       | - In the terminal, assuming you have Node.js and Git installed,      |
 | jest              |   install Zsh.  
 
