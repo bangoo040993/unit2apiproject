@@ -30,16 +30,20 @@
 |                | List            |                 |
 |----------------|-----------------|-----------------|
 | JavaScript     | ERD Charts      | dotenv          |
-| dotenv         | jest            |                 |
-| supertest      | artillery       |test             |
-| VS Code        | Postman         |test             |
-| Trello         | MERN            |test             |
-| sha256         |           |test             |   
-| bcrypt         | bcrypt          |test             |
+| dotenv         | jest            | supertest       |
+| supertest      | artillery       | bcrypt          |
+| VS Code        | Postman         | MERN            |
+| Trello         | sha256          |                 |
+<!-- add more
+|                |                 |                 |
+-->  
+
 
 
 
 ### HOW TO RUN
+<details>
+<ol>
 - Fork this repository 
 - From your own forked repository url clone the code in terminal 
 - 
@@ -54,8 +58,8 @@
 
         MONGO_URI=mongodb+srv://Sampleid:samplePassword@cluster0.iAmLost.mongodb.net/samplecluster?retryWrites=true&w=majority
         SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R
-    
-- 
+   </ol> 
+</details>
 
 <!-- GETTING STARTED -->
 ## Getting Started
