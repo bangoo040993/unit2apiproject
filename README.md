@@ -29,10 +29,10 @@
  
 | List           | List            | list            |
 |----------------|-----------------|-----------------|
-| JavaScript    | ERD Charts      | - Fork the repository                                                 |
-| dotenv         | jest              | - From your repository URL, clone the code. Use `git clone <link>`    |
-| supertest      | artillery          | - In the terminal, assuming you have Node.js and Git installed,       |
-| VS Code       | Postman        |   install Zsh.                                                        |
+| JavaScript    | ERD Charts      |   |
+| dotenv         | jest              |     |
+| supertest      | artillery          |      |
+| VS Code       | Postman        |                                                    |
 | Trello           | MERN              |                                                                       |
 | sha256         | jwt                 |                                                                       |
 | bcrypt          |                    |                                                                       |
