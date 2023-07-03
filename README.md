@@ -27,12 +27,15 @@
 
 ## Built-with
  
-| List             | Instructions                                                         | test |
-|------------------|----------------------------------------------------------------------| 
-| JavaScript      | - Fork the repository                                                | test |
-| dotenv           | - From your repository URL, clone the code. Use    | test |
-| ERD Charts       | - In the terminal, assuming you have Node.js and Git installed,      |
-| jest              |   install Zsh.  
+| List           | List            | list            |
+|----------------|-----------------|-----------------|
+| JavaScript    | ERD Charts      | - Fork the repository                                                 |
+| dotenv         | jest              | - From your repository URL, clone the code. Use `git clone <link>`    |
+| supertest      | artillery          | - In the terminal, assuming you have Node.js and Git installed,       |
+| VS Code       | Postman        |   install Zsh.                                                        |
+| Trello           | MERN              |                                                                       |
+| sha256         | jwt                 |                                                                       |
+| bcrypt          |                    |                                                                       |
 
 
 - JavaScript
