@@ -27,42 +27,29 @@
 
 ## Built-with
  
-| List           | List            | list            |
+|                | List            |                 |
 |----------------|-----------------|-----------------|
-| JavaScript     | ERD Charts      |                 |
+| JavaScript     | ERD Charts      | dotenv          |
 | dotenv         | jest            |                 |
-| supertest      | artillery       |                 |
-| VS Code        | Postman         |                 |
-| Trello         | MERN            |                 |
-| bcrypt         | bcrypt          |                 |   
-| bcrypt         | bcrypt          |                 |
+| supertest      | artillery       |test             |
+| VS Code        | Postman         |test             |
+| Trello         | MERN            |test             |
+| sha256         |           |test             |   
+| bcrypt         | bcrypt          |test             |
 
-- JavaScript
-- dotenv
-- ERD Charts
-- jest
-- supertest
-- morgan
-- artillery
-- VS Code
-- Postman
-- Trello
-- MERN
-- sha256
-- jwt
-- bcrypt
+
 
 ### HOW TO RUN
-- Fork the repository 
-- From your repository url clone the code
-- In terminal use command git clone <link of your clone> 
+- Fork this repository 
+- From your own forked repository url clone the code in terminal 
+- 
+- In terminal use command git clone 
 - from there assuming you have install node and git zshell install all the packages 
-- sudo npm i brcrypt dotenv express mongoose nodemon morgan 
-- then// sudo npm i --save-dev artillery jest mongodb-memory-server@8.12.2 supertest
-- download post man as well
+- `sudo npm i brcrypt dotenv express mongoose nodemon morgan` 
+- then// `sudo npm i --save-dev artillery jest mongodb-memory-server@8.12.2 supertest`
 - sign up for mongodb database make sure your server accept all ip address by putting0.0.0
 - also install vscode 
-- create a file call `touch .env`
+- create a file call `touch .env` and inside that file you should have something like this from mongodb. 
 -
 
         MONGO_URI=mongodb+srv://Sampleid:samplePassword@cluster0.iAmLost.mongodb.net/samplecluster?retryWrites=true&w=majority
