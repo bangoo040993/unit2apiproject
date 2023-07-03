@@ -29,14 +29,13 @@
  
 | List           | List            | list            |
 |----------------|-----------------|-----------------|
-| JavaScript    | ERD Charts      |   |
-| dotenv         | jest              |     |
-| supertest      | artillery          |      |
-| VS Code       | Postman        |                                                    |
-| Trello           | MERN              |                                                                       |
-| sha256         | jwt                 |                                                                       |
-| bcrypt          |                    |                                                                       |
-
+| JavaScript     | ERD Charts      |                 |
+| dotenv         | jest            |                 |
+| supertest      | artillery       |                 |
+| VS Code        | Postman         |                 |
+| Trello         | MERN            |                 |
+| bcrypt         | bcrypt          |                 |   
+| bcrypt         | bcrypt          |                 |
 
 - JavaScript
 - dotenv
