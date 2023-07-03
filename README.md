@@ -27,20 +27,13 @@
 
 ## Built-with
  
-- JavaScript
-- dotenv
-- ERD Charts
-- jest
-- supertest
-- morgan
-- artillery
-- VS Code
-- Postman
-- Trello
-- MERN
-- sha256
-- jwt
-- bcrypt
+- JavaScript          - dotenv
+- ERD Charts          - jest
+- supertest           - morgan
+- artillery           - VS Code
+- Postman             - Trello
+- MERN                - sha256
+- jwt                 - bcrypt
 
 ### HOW TO RUN
 - Fork the repository 
