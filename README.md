@@ -1,6 +1,5 @@
 # unit2apiproject
 
-[link to trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
 
 <details>
   <summary>Table of Contents</summary>
@@ -8,7 +7,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#Shopping-Cart">Shopping Cart</a></li>
       </ul>
     </li>
     <li>
@@ -27,19 +26,23 @@
   </ol>
 </details>
 
-## Built-with
+### Shopping Cart
+-  Link to [trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
+-  This code is a RESTful API for an e-commerce application. It allows you to manage users, items, and carts using standard HTTP methods. You can create, retrieve, update, and delete users, items, and carts. The API follows RESTful principles, providing a structured and standardized way to interact with the resources.
 
+### Prerequisites
 |            | List       |           |
 | ---------- | ---------- | --------- |
-| JavaScript | ERD Charts | dotenv    |
-| dotenv     | jest       | supertest |
-| supertest  | artillery  | bcrypt    |
-| VS Code    | Postman    | MERN      |
-| Trello     | sha256     |           |
+| Postman    | Node.js    | Mongodb   |
+| Github     |            |           |
 
-<!-- add more
-|                |                 |                 |
--->
+### Installation
+-  In this Repository click on (https://i.imgur.com/KnIsl0n.png)
+
+
+
+
+
 
 ### HOW TO RUN
 
@@ -78,3 +81,17 @@
 -   july 1 make a wish list and favorites array for user and
 -   july 4 need to finish all the routes
 -   finish up
+
+## Built-With-and-Contribution
+
+|            | List       |           |
+| ---------- | ---------- | --------- |
+| JavaScript | ERD Charts | dotenv    |
+| dotenv     | jest       | supertest |
+| supertest  | artillery  | bcrypt    |
+| VS Code    | Postman    | MERN      |
+| Trello     | sha256     | Prettier  |
+
+<!-- add more
+|                |                 |                 |
+-->

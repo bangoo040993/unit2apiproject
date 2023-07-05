@@ -8,7 +8,7 @@ exports.auth = async (req, res, next) => {
         const token = req.header("Authorization").replace("Bearer ", "");
         const data = jwt.verify(token, process.env.SECRET);
         const user = await User.findOne({ _id: data._id });
-        if (!user) {
+        if (!user.loggedIn) {
             throw new Error("bad credentials");
         }
         req.user = user;
