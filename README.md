@@ -39,7 +39,7 @@
 ### Installation
 -  copy this link below
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
-
+-  inside terminal 
 
 
 
