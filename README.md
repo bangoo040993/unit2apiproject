@@ -39,8 +39,10 @@
 ### Installation
 -  copy this link below
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
--  open terminal ```mkdir <foldername>```
-
+-  open terminal and enter this ```mkdir <foldername>```
+-  go into that folder with this command ```cd <foldername>```
+-  inside that folder run this command with the link from the first bullet ```git clone <link>```
+-  
 
 
 
