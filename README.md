@@ -43,7 +43,8 @@
 -  go into that folder with this command ```cd <foldername>```
 -  inside that folder run this command with the link you had copied ```git clone <link>```
 -  once it had been clone type `ls` to see the folder name and then ```cd <foldername>```
-
+-  lets install all the packages you need to get this to work copy these lines below
+<pre><code>sudo npm i bcrypt dotenv express jsonwebtoken mongoose morgan nodemon</code></pre>
 
 
 ### HOW TO RUN
