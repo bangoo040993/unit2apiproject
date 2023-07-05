@@ -38,8 +38,8 @@
 
 ### Installation
 -  copy this link below
-<code>https://github.com/bangoo040993/unit2apiproject.git</code>
--  inside terminal 
+<pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
+-  open terminal ```mkdir <foldername>```
 
 
 
