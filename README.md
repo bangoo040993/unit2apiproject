@@ -37,7 +37,7 @@
 | Github     |            |           |
 
 ### Installation
-- copy this link below
+copy this link below
 ##
      https://github.com/bangoo040993/unit2apiproject.git
 
