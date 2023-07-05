@@ -41,8 +41,8 @@
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
 -  open terminal and enter this ```mkdir <foldername>```
 -  go into that folder with this command ```cd <foldername>```
--  inside that folder run this command with the link from the first bullet ```git clone <link>```
--  
+-  inside that folder run this command with the link you had copied ```git clone <link>```
+-  once it had been clone type `ls` to see the folder name and then `cd
 
 
 
