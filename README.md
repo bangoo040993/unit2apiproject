@@ -37,8 +37,8 @@
 | Github     |            |           |
 
 ### Installation
--  In this Repository click on ![](https://i.imgur.com/KnIsl0n.png)
-
+-  copy this link below
+    This is an API for managing recipes using Mongoose, and Express
 
 
 
