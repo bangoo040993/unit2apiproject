@@ -37,7 +37,7 @@
 | Github     |            |           |
 
 ### Installation
--  In this Repository click on (https://i.imgur.com/KnIsl0n.png)
+-  In this Repository click on [](https://i.imgur.com/KnIsl0n.png)
 
 
 
