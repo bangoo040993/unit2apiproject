@@ -38,7 +38,7 @@
 
 ### Installation
 -  copy this link below
-    This is an API for managing recipes using Mongoose, and Express
+    https://github.com/bangoo040993/unit2apiproject.git
 
 
 
