@@ -1,31 +1,31 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        unique: true
-      },
+        unique: true,
+    },
     price: {
         type: Number,
-        required: true
-      },
+        required: true,
+    },
     description: {
         type: String,
         required: true,
-        unique: true
-      },
+        unique: true,
+    },
     saveForLater: {
         type: Boolean,
-        default: false
-      },
+        default: false,
+    },
     favorite: {
         type: Boolean,
-        default: false
-      },
-      orderRequest: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User'}]
+        default: false,
+    },
+    orderRequest: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
 });
 
-const Item = mongoose.model('itemModel', itemSchema);
+const Item = mongoose.model("itemModel", itemSchema);
 
-module.exports = Item
+module.exports = Item;
