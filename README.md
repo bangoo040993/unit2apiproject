@@ -100,7 +100,7 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 | supertest  | artillery  | bcrypt    |
 | VS Code    | Postman    | MERN      |
 | Trello     | sha256     | Prettier  |
-
+|mufid[markdownsyntext](https://gist.github.com/mufid)                |                 |                 |
 <!-- add more
 |                |                 |                 |
 -->
