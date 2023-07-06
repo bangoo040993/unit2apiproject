@@ -15,18 +15,16 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#PostMan">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#how-to-run">how to run</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#challenges">challenges</a></li>
     <li><a href="#note-to-self">note to self</a></li>
+    <li><a href="#Built-With-and-Contribution">built with and contribution</a></li>
   </ol>
 </details>
 
-### Shopping Cart
+# Shopping Cart
 -  Link to [trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
 -  This code is a RESTful API for an e-commerce application. It allows you to manage users, items, and carts using standard HTTP methods. You can create, retrieve, update, and delete users, items, and carts. The API follows RESTful principles, providing a structured and standardized way to interact with the resources.
 ## Getting Started
@@ -76,9 +74,7 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 - add/remove item 'PUT' `http://localhost:3000/items/:id/favorite`
 
 
-<!-- GETTING STARTED -->
 
-## Getting Started
 
 ### Challenges
 
@@ -95,7 +91,7 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 -   july 4 need to finish all the routes
 -   finish up
 
-## Built-With-and-Contribution
+## Built With and Contribution
 
 |            | List       |           |
 | ---------- | ---------- | --------- |
