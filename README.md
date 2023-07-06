@@ -44,16 +44,18 @@
 -  inside that folder run this command with the link you had copied ```git clone <link>```
 -  once it had been clone type `ls` to see the folder name and then ```cd <foldername>```
 -  lets install all the packages you need in order to get this to work copy these lines below
-<pre><code>sudo npm i bcrypt dotenv express jsonwebtoken mongoose morgan nodemon</code></pre>
-<pre><code>sudo npm i --save-dev artillery jest supertest mongodb-memory-server@8.12.2 </code></pre>
+<pre><code>sudo npm i </code></pre>
+
 -  let it cook once done `touch .env`
 -  lets enter the code using vscode with the command in terminal `code .`
 -  go to your .env file inside you should have something like this
 <pre><code>MONGO_URI=mongodb+srv://Sampleid:samplePassword@cluster0.iAmLost.mongodb.net/samplecluster?retryWrites=true&w=majority
 SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
--  to get the MONGO_URI= you can get this link from your mongodb acount
+-  to get the MONGO_URI= you can get this link from your [mongodb](https://www.mongodb.com/) account
 -  to get the SECRET= follow this [link](https://emn178.github.io/online-tools/sha256.html)
-
+- save and then `npm run dev` in terminal 
+- open terminal in vs code with `control shift back tic` and run this command `npm run dev`
+- If you're getting invaded my Mongolian and andre 3000 singing then you are good go to go!
 
 ### HOW TO RUN
 
