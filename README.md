@@ -37,7 +37,7 @@
 | Github     |            |           |
 
 ### Installation
-<install-fest>
+
 -  copy this link below
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
 -  open terminal and enter this ```mkdir <foldername>```
@@ -55,7 +55,7 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 - save and then `npm run dev` in terminal 
 - open terminal in vs code with `control shift back tic` and run this command `npm run dev`
 - If you're getting invaded my Mongolian and andre 3000 singing then you are good go to go!
-<install-fest>
+
 ### HOW TO RUN
 
 <details>
