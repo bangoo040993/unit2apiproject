@@ -16,8 +16,9 @@ afterAll(async () => {
     mongoServer.stop();
     server.close();
 });
-describe("POST /users", () => {
-    it("should create a new user", async () => {
+
+describe("Http request for /users", () => {
+    test("it should create a new user", async () => {
         const user = {
             name: "McAfee",
             email: "iDidNotKMS@gmail.com",
@@ -33,42 +34,86 @@ describe("POST /users", () => {
         expect(createdUser.password).not.toBe(user.password);
     });
 });
-
-describe("GET /users/:id", () => {
-    it("should get a user by id", async () => {
-        const user = new User({
-            name: "McAfee",
-            email: "iDidNotKMS1@gmail.com",
-            password: "sameforepstein",
-        });
-        await user.save();
-        const response = await request(app).get(`/users/${user._id}`);
-        expect(response.status).toBe(200);
-        expect(response.body.message).toBe("User retrieved successfully");
-        expect(response.body.user.name).toBe("McAfee");
-        expect(response.body.user.email).toBe("iDidNotKMS1@gmail.com");
+test("it should get a user by id", async () => {
+    const user = new User({
+        name: "McAfee",
+        email: "iDidNotKMS1@gmail.com",
+        password: "sameforepstein",
     });
+    await user.save();
+    const response = await request(app).get(`/users/${user._id}`);
+    expect(response.status).toBe(200);
+    expect(response.body.message).toBe("User retrieved successfully");
+    expect(response.body.user.name).toBe("McAfee");
+    expect(response.body.user.email).toBe("iDidNotKMS1@gmail.com");
 });
 
-describe("GET /users", () => {
-    it("should return all users", async () => {
-        const response = await request(app).get("/users");
-        console.log(response.body);
-        expect(response.body.message).toBe("we in Neo");
-    });
+test("it should return all users", async () => {
+    const response = await request(app).get("/users");
+    console.log(response.body);
+    expect(response.body.message).toBe("we in Neo");
 });
 
+test("it should return a token if login is successful", async () => {
+    const response = await request(app).post("/users/login").send({
+        email: "iDidNotKMS1@gmail.com",
+        password: "sameforepstein",
+    });
+    console.log(response.body);
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty("token");
+});
 
-describe('POST /users/login', () => {
-    it('should return a token if login is successful', async () => {
-      const response = await request(app)
-        .post('/users/login')
-        .send({
-            email: "iDidNotKMS1@gmail.com",
-            password: "sameforepstein",
-        });
-  
-      expect(response.status).toBe(200);
-      expect(response.body).toHaveProperty('token');
-    })
-})
+test("It should delete a user", async () => {
+    const user = new User({ 
+        name: "bao", 
+        email: "bao", 
+        password: "bao" 
+    });
+    await user.save();
+    const token = await user.generateAuthToken();
+    const response = await request(app)
+        .delete(`/users/${user._id}`)
+        .set("Authorization", `Bearer ${token}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.message).toBe("User deleted successfully");
+});
+
+test("It should log out a user", async () => {
+    const user = new User({
+        name: "gun",
+        email: "AkGun@gmail.com",
+        password: "baoisawesome",
+    });
+    await user.save();
+    const token = await user.generateAuthToken();
+    const response = await request(app)
+        .post("/users/logout")
+        .set("Authorization", `Bearer ${token}`);
+
+    expect(response.statusCode).toBe(200);
+    expect(response.body.message).toBe("Logout successful");
+});
+
+test("It should update a user", async () => {
+    const user = new User({
+        name: "gun",
+        email: "AkGun1@gmail.com",
+        password: "baoisawesome",
+    });
+    await user.save();
+    const token = await user.generateAuthToken();
+    const updatedUser = {
+        name: "updatedName",
+        email: "updatedEmail@gmail.com",
+        password: "updatedPassword",
+    };
+    const response = await request(app)
+        .put(`/users/${user._id}`)
+        .set("Authorization", `Bearer ${token}`)
+        .send(updatedUser);
+    expect(response.statusCode).toBe(200);
+    expect(response.body.updatingUser.name).toBe(updatedUser.name);
+    expect(response.body.updatingUser.email).toBe(updatedUser.email);
+});

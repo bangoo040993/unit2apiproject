@@ -56,6 +56,17 @@ exports.loginUser = async (req, res) => {
     }
 };
 
+exports.logoutUser = async (req, res) => {
+    try {
+        const user = req.user;
+        user.token = null;
+        await user.save();
+        res.status(200).json({ message: "Logout successful" });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
 exports.updateUser = async (req, res) => {
     try {
         const updatingUser = await User.findOneAndUpdate(

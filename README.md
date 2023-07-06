@@ -1,6 +1,5 @@
 # unit2apiproject
 
-
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -15,7 +14,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#PostMan">Installation</a></li>
+        <li><a href="#PostMan">Postman</a></li>
       </ul>
     </li>
     <li><a href="#challenges">challenges</a></li>
@@ -25,56 +24,57 @@
 </details>
 
 # Shopping Cart
--  Link to [trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
--  This code is a RESTful API for an e-commerce application. It allows you to manage users, items, and carts using standard HTTP methods. You can create, retrieve, update, and delete users, items, and carts. The API follows RESTful principles, providing a structured and standardized way to interact with the resources.
+
+-   Link to [trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
+-   This code is a RESTful API for an e-commerce application. It allows you to manage users, items, and carts using standard HTTP methods. You can create, retrieve, update, and delete users, items, and carts. The API follows RESTful principles, providing a structured and standardized way to interact with the resources.
+
 ## Getting Started
 
 ### Prerequisites
-|            | List       |           |
-| ---------- | ---------- | --------- |
-| Postman    | Node.js    | Mongodb   |
-| Github     |            |           |
+
+|         | List    |         |
+| ------- | ------- | ------- |
+| Postman | Node.js | Mongodb |
+| Github  |         |         |
 
 ### Installation
 
--  copy this link below
+-   copy this link below
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
--  Open the terminal and enter the following command to create a new folder ```mkdir <foldername>```
--  Navigate into the newly created folder using the command ```cd <foldername>```
--  Clone the repository using the provided GitHub link by running the following command ```git clone <link>```
--  Once the repository has been cloned, use the `ls` command to see the folder name and then navigate into the folder using ```cd <foldername>```
--  Install all the required packages by running the command `sudo npm i`
--  Let it cook! Once it's done, creat a file `touch .env`
--  let start coding! In terminal `code .`
--  go to your .env file inside you should have something like this
+-   Open the terminal and enter the following command to create a new folder `mkdir <foldername>`
+-   Navigate into the newly created folder using the command `cd <foldername>`
+-   Clone the repository using the provided GitHub link by running the following command `git clone <link>`
+-   Once the repository has been cloned, use the `ls` command to see the folder name and then navigate into the folder using `cd <foldername>`
+-   Install all the required packages by running the command `sudo npm i`
+-   Let it cook! Once it's done, creat a file `touch .env`
+-   let start coding! In terminal `code .`
+-   go to your .env file inside you should have something like this
 <pre><code>MONGO_URI=mongodb+srv://Sampleid:samplePassword@cluster0.iAmLost.mongodb.net/samplecluster?retryWrites=true&w=majority
 SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
--  to get the MONGO_URI= you can get this link from your [mongodb](https://www.mongodb.com/) account
--  to get the SECRET= follow this [link](https://emn178.github.io/online-tools/sha256.html)
--  save and then `npm run dev` in terminal 
--  open terminal in vs code with `control shift back tic` and run this command `npm run dev`
--  If you're getting invaded my Mongolian and andre 3000 singing then you are good to go!
+-   to get the MONGO_URI= you can get this link from your [mongodb](https://www.mongodb.com/) account
+-   to get the SECRET= follow this [link](https://emn178.github.io/online-tools/sha256.html)
+-   save and then `npm run dev` in terminal
+-   open terminal in vs code with `control shift back tic` and run this command `npm run dev`
+-   If you're getting invaded my Mongolian and andre 3000 singing then you are good to go!
 
 ### PostMan
-- create a user 'POST' `http://localhost:3000/users/`
+
+-   create a user 'POST' `http://localhost:3000/users/`
 <pre><code>{
     "name": "sample",
     "email": "sample",
     "password": "sample"
 }</code></pre>
-- login 'POST' `http://localhost:3000/users/login`
+-   login 'POST' `http://localhost:3000/users/login`
  <pre><code>{
     "email": "sample",
     "password": "sample"
 }</code></pre>
-- create an item 'POST' `http://localhost:3000/carts/create`
+-   create an item 'POST' `http://localhost:3000/carts/create`
 <pre><code>{
     "item": "itemId"
 }</code></pre>
-- add/remove item 'PUT' `http://localhost:3000/items/:id/favorite`
-
-
-
+-   add/remove item 'PUT' `http://localhost:3000/items/:id/favorite`
 
 ### Challenges
 
