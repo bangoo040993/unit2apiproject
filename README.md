@@ -57,7 +57,15 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 -  If you're getting invaded my Mongolian and andre 3000 singing then you are good to go!
 
 ### PostMan
--
+- create a user 
+<pre><code>{
+  {
+    "name": "sample",
+    "email": "sample",
+    "password": "sample"
+}
+
+}</code></pre>
 
 <!-- GETTING STARTED -->
 
