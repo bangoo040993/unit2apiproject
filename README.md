@@ -58,14 +58,21 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 
 ### PostMan
 - create a user 
-<pre><code>{
+<pre><code>
   {
     "name": "sample",
     "email": "sample",
     "password": "sample"
 }
+</code></pre>
+- login
+ <pre><code>
+  {
+    "email": "sample",
+    "password": "sample"
+}
+</code></pre>
 
-}</code></pre>
 
 <!-- GETTING STARTED -->
 
