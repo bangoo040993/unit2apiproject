@@ -29,6 +29,7 @@
 ### Shopping Cart
 -  Link to [trello](https://trello.com/invite/b/ieQ1mtcf/ATTIface979797e68de5cf0f94b9bc46405cE4727943/pack-opening)
 -  This code is a RESTful API for an e-commerce application. It allows you to manage users, items, and carts using standard HTTP methods. You can create, retrieve, update, and delete users, items, and carts. The API follows RESTful principles, providing a structured and standardized way to interact with the resources.
+## Getting Started
 
 ### Prerequisites
 |            | List       |           |
@@ -57,17 +58,22 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 -  If you're getting invaded my Mongolian and andre 3000 singing then you are good to go!
 
 ### PostMan
-- create a user 
+- create a user 'POST' `http://localhost:3000/users/`
 <pre><code>{
     "name": "sample",
     "email": "sample",
     "password": "sample"
 }</code></pre>
-- login
+- login 'POST' `http://localhost:3000/users/login`
  <pre><code>{
     "email": "sample",
     "password": "sample"
 }</code></pre>
+- create an item 'POST' `http://localhost:3000/carts/create`
+<pre><code>{
+    "item": "itemId"
+}</code></pre>
+- add/remove item 'PUT' `http://localhost:3000/items/:id/favorite`
 
 
 <!-- GETTING STARTED -->
