@@ -38,47 +38,26 @@
 
 ### Installation
 
-<details>
-
 -  copy this link below
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
--  open terminal and enter this ```mkdir <foldername>```
--  go into that folder with this command ```cd <foldername>```
--  inside that folder run this command with the link you had copied ```git clone <link>```
--  once it had been clone type `ls` to see the folder name and then ```cd <foldername>```
--  lets install all the packages you need in order to get this to work copy these lines `sudo npm i`
--  let it cook once done `touch .env`
--  lets enter the code using vscode with the command in terminal `code .`
+-  Open the terminal and enter the following command to create a new folder ```mkdir <foldername>```
+-  Navigate into the newly created folder using the command ```cd <foldername>```
+-  Clone the repository using the provided GitHub link by running the following command ```git clone <link>```
+-  Once the repository has been cloned, use the `ls` command to see the folder name and then navigate into the folder using ```cd <foldername>```
+-  Install all the required packages by running the command `sudo npm i`
+-  Let it cook! Once it's done, creat a file `touch .env`
+-  let start coding! In terminal `code .`
 -  go to your .env file inside you should have something like this
 <pre><code>MONGO_URI=mongodb+srv://Sampleid:samplePassword@cluster0.iAmLost.mongodb.net/samplecluster?retryWrites=true&w=majority
 SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 -  to get the MONGO_URI= you can get this link from your [mongodb](https://www.mongodb.com/) account
 -  to get the SECRET= follow this [link](https://emn178.github.io/online-tools/sha256.html)
-- save and then `npm run dev` in terminal 
-- open terminal in vs code with `control shift back tic` and run this command `npm run dev`
-- If you're getting invaded my Mongolian and andre 3000 singing then you are good go to go!
+-  save and then `npm run dev` in terminal 
+-  open terminal in vs code with `control shift back tic` and run this command `npm run dev`
+-  If you're getting invaded my Mongolian and andre 3000 singing then you are good to go!
 
-<details>
-
-
-### HOW TO RUN
-
-<details>
-
--   Fork this repository
--   From your own forked repository url clone the code in terminal
+### PostMan
 -
--   In terminal use command git clone
--   from there assuming you have install node and git zshell install all the packages
--   `sudo npm i brcrypt dotenv express mongoose nodemon morgan`
--   then// `sudo npm i --save-dev artillery jest mongodb-memory-server@8.12.2 supertest`
--   sign up for mongodb database make sure your server accept all ip address by putting0.0.0
--   also install vscode
--   create a file call `touch .env` and inside that file you should have something like this from mongodb.
--            MONGO_URI=mongodb+srv://Sampleid:samplePassword@cluster0.iAmLost.mongodb.net/samplecluster?retryWrites=true&w=majority
-             SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R
-
-</details>
 
 <!-- GETTING STARTED -->
 

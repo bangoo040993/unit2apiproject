@@ -8,7 +8,7 @@ exports.auth = async (req, res, next) => {
         const token = req.header("Authorization").replace("Bearer ", "");
         const data = jwt.verify(token, process.env.SECRET);
         const user = await User.findOne({ _id: data._id });
-        if (!user.loggedIn) {
+        if (!user) {
             throw new Error("bad credentials");
         }
         req.user = user;
@@ -49,8 +49,6 @@ exports.loginUser = async (req, res) => {
             res.json({ message: "INVALID CREDENTIALS" });
         } else {
             const token = await user.generateAuthToken();
-            user.loggedIn = true;
-            console.log(user.loggedIn);
             res.json({ user, token });
         }
     } catch (error) {

@@ -57,3 +57,18 @@ describe("GET /users", () => {
         expect(response.body.message).toBe("we in Neo");
     });
 });
+
+
+describe('POST /users/login', () => {
+    it('should return a token if login is successful', async () => {
+      const response = await request(app)
+        .post('/users/login')
+        .send({
+            email: "iDidNotKMS1@gmail.com",
+            password: "sameforepstein",
+        });
+  
+      expect(response.status).toBe(200);
+      expect(response.body).toHaveProperty('token');
+    })
+})
