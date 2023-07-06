@@ -37,15 +37,14 @@
 | Github     |            |           |
 
 ### Installation
+<install-fest>
 -  copy this link below
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
 -  open terminal and enter this ```mkdir <foldername>```
 -  go into that folder with this command ```cd <foldername>```
 -  inside that folder run this command with the link you had copied ```git clone <link>```
 -  once it had been clone type `ls` to see the folder name and then ```cd <foldername>```
--  lets install all the packages you need in order to get this to work copy these lines below
-<pre><code>sudo npm i </code></pre>
-
+-  lets install all the packages you need in order to get this to work copy these lines `sudo npm i`
 -  let it cook once done `touch .env`
 -  lets enter the code using vscode with the command in terminal `code .`
 -  go to your .env file inside you should have something like this
@@ -56,7 +55,7 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 - save and then `npm run dev` in terminal 
 - open terminal in vs code with `control shift back tic` and run this command `npm run dev`
 - If you're getting invaded my Mongolian and andre 3000 singing then you are good go to go!
-
+<install-fest>
 ### HOW TO RUN
 
 <details>
