@@ -70,7 +70,7 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
     "email": "sample",
     "password": "sample"
 }</code></pre>
--   create an item 'POST' `http://localhost:3000/carts/create`
+-   once loging you should get something like this [](https://i.imgur.com/OEnOoyv.png)
 <pre><code>{
     "item": "itemId"
 }</code></pre>
