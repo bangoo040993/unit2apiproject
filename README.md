@@ -85,16 +85,29 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
     "description": "test1"
 }</code></pre>
 
--   copy that item _id we will need it for favoriting it to user favorites array 'PUT' `http://localhost:3000/items/<ITEM ID HERE!>/favorite`
+-   copy that item _id we will need it for favoriting it to user favorites array `PUT` `http://localhost:3000/items/<ITEM ID HERE!>/favorite`
+####
+#### Cart
+-   now we can make a cart with the id and user id `POST` `http://localhost:3000/carts/<ITEM ID HERE~!>/create`
 
+-   you can see your carts and item with this `GET` `http://localhost:3000/carts/<CARTIDHERE!>`
 
+-   add more item to your cart with this `PUT` `http://localhost:3000/carts/<CARTIDHERE!>/edit`
+<pre><code>{
+    "item": "itemId"
+}</code></pre>
+-   remove item from your cart with this `PUT` `http://localhost:3000/carts/<CARTIDHERE!>/remove`
+<pre><code>{
+    "item": "itemId"
+}</code></pre>
+-   delete the whole cart with this `DELETE` `http://localhost:3000/carts/<CARTIDHERE!>`
 ### Challenges
 
 -   When creating or editing names of certain files, there are errors that you can't easily undo. In such cases, it is often best to delete those files and start anew.
 -   I had to perform a hard reset on my project twice due to issues with GitHub. I made a big mistake when attempting to dry test cloning, and I learned the importance of always changing the directory before cloning.
 -   It's easy to get tunnel vision and focus solely on one problem at a time, which can occasionally yield positive results. However, most of the time, it delays progress on the entire project.
 -   Don't get too ahead of yourself. Use the time you save to learn more, understand more, or theoretically test certain aspects of things.
-
+-   DONT STRESS OUT TOO MUCH THIS TOO SHALL PASS
 ## note to self
 
 -   should have done this in the begining but never lates than never?
