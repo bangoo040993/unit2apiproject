@@ -59,6 +59,7 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 
 ### PostMan
 
+#### User
 -   create a user 'POST' `http://localhost:3000/users/`
 <pre><code>{
     "name": "sample",
@@ -70,10 +71,22 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
     "email": "sample",
     "password": "sample"
 }</code></pre>
--   once loging you should get something like this ![this](https://i.imgur.com/OEnOoyv.png)
-    "item": "itemId"
+-   once login you should get something like this ![this](https://i.imgur.com/OEnOoyv.png)
+   
+-   copy the token from that and paste it here![this](https://i.imgur.com/4cdS0rK.png)
+
+-   any routes that require authetication or authorization will need to have a token 
+####
+#### Item
+-   creat an item or two 'POST'
+ <pre><code>{
+    "name": "test1",
+    "price": "999",
+    "description": "test1"
 }</code></pre>
--   add/remove item 'PUT' `http://localhost:3000/items/:id/favorite`
+
+-   copy that item _id we will need it for favoriting it to user favorites array 'PUT' `http://localhost:3000/items/<ITEM ID HERE!>/favorite`
+
 
 ### Challenges
 
