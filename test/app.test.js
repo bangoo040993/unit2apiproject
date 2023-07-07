@@ -2,8 +2,9 @@ const request = require("supertest");
 const mongoose = require("mongoose");
 const { MongoMemoryServer } = require("mongodb-memory-server");
 const app = require("../app");
-const server = app.listen(8080, () => console.log("Testing on PORT 8080"));
+const server = app.listen(9001, () => console.log("Testing on PORT 9001"));
 const User = require("../models/userModel");
+const Item = require("../models/itemModel");
 let mongoServer;
 
 beforeAll(async () => {
@@ -65,10 +66,10 @@ test("it should return a token if login is successful", async () => {
 });
 
 test("It should delete a user", async () => {
-    const user = new User({ 
-        name: "bao", 
-        email: "bao", 
-        password: "bao" 
+    const user = new User({
+        name: "bao",
+        email: "bao",
+        password: "bao",
     });
     await user.save();
     const token = await user.generateAuthToken();

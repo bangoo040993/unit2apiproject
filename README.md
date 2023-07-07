@@ -41,7 +41,7 @@
 
 -   copy this link below
 <pre><code>https://github.com/bangoo040993/unit2apiproject.git</code></pre>
--   Open the terminal and enter the following command to create a new folder `mkdir <foldername>`
+-   Open up terminal go to your route with this command `cd ~` and then enter following command to create a new folder `mkdir <foldername>`
 -   Navigate into the newly created folder using the command `cd <foldername>`
 -   Clone the repository using the provided GitHub link by running the following command `git clone <link>`
 -   Once the repository has been cloned, use the `ls` command to see the folder name and then navigate into the folder using `cd <foldername>`
@@ -93,14 +93,15 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
 
 ## Built With and Contribution
 
-|            | List       |           |
-| ---------- | ---------- | --------- |
-| JavaScript | ERD Charts | dotenv    |
-| dotenv     | jest       | supertest |
-| supertest  | artillery  | bcrypt    |
-| VS Code    | Postman    | MERN      |
-| Trello     | sha256     | Prettier  |
-|mufid[markdownsyntext](https://gist.github.com/mufid)|othneildrew [readmetemplate](https://github.com/othneildrew/Best-README-Template#about-the-project)                 |                 |
+|                                                       | List                                                                                                |           |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------- |
+| JavaScript                                            | ERD Charts                                                                                          | dotenv    |
+| dotenv                                                | jest                                                                                                | supertest |
+| supertest                                             | artillery                                                                                           | bcrypt    |
+| VS Code                                               | Postman                                                                                             | MERN      |
+| Trello                                                | sha256                                                                                              | Prettier  |
+| mufid[markdownsyntext](https://gist.github.com/mufid) | othneildrew [readmetemplate](https://github.com/othneildrew/Best-README-Template#about-the-project) |           |
+
 <!-- add more
 |                |                 |                 |
 -->

@@ -5,12 +5,15 @@ const Item = require("../models/itemModel");
 exports.createCart = async (req, res) => {
     try {
         req.body.user = req.user._id;
+        req.body.item = req.params.id;
         const cart = await Cart.create(req.body);
         req.user.cart = { _id: cart._id };
         await req.user.save();
         res.json(cart);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(400).json({
+            message: error.message,
+        });
     }
 };
 
@@ -18,16 +21,8 @@ exports.getOneCart = async (req, res) => {
     try {
         const oneCart = await Cart.findOne({ _id: req.params.id });
         res.json({
-            message: "Item retrieved successfully",
+            message: "Cart retrieved successfully",
             cart: oneCart,
-            seeAllItems: {
-                type: "GET",
-                url: "http://localhost:3000/carts/",
-            },
-            createNewItem: {
-                type: "POST",
-                url: "http://localhost:3000/carts/create",
-            },
         });
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -39,16 +34,7 @@ exports.getAllCarts = async (req, res) => {
         const foundCarts = await Cart.find({});
         res.json({
             message: "we in Neo",
-            cart: foundCarts.map((doc) => {
-                return {
-                    item: doc.item,
-                    cart: doc._id,
-                    request: {
-                        type: "GET",
-                        url: "http://localhost:3000/carts/" + doc._id,
-                    },
-                };
-            }),
+            cart: foundCarts,
         });
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -69,7 +55,7 @@ exports.addItemToCart = async (req, res) => {
         }
         cart.items.push(item);
         await cart.save();
-        res.json({ message: "Item added to cart successfully" });
+        res.json({ message: "Item added to cart successfully", cart: cart });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -89,7 +75,7 @@ exports.removeItemFromCart = async (req, res) => {
         }
         cart.items.pull(itemId);
         await cart.save();
-        res.json({ message: "Item remove from cart successfully" });
+        res.json({ message: "Item remove from cart successfully", cart: cart });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
