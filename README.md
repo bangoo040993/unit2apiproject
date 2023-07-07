@@ -70,7 +70,8 @@ SECRET=i4ml05tn33d460Dh31pM3pu7MyW0r1D1N0rD3R</code></pre>
     "email": "sample",
     "password": "sample"
 }</code></pre>
--   once loging you should get something like this [this](https://i.imgur.com/OEnOoyv.png)
+-   once loging you should get something like this 
+<alt="this" src="https://i.imgur.com/OEnOoyv.png">
 <pre><code>{
     "item": "itemId"
 }</code></pre>
