@@ -8,10 +8,6 @@ router.get("/:id", itemsControllers.getOneItem);
 router.post("/create", itemsControllers.createItem);
 router.delete("/:id", itemsControllers.deleteItem);
 router.put("/:id", itemsControllers.updateItem);
-router.put(
-    "/:id/favorite",
-    usersControllers.auth,
-    itemsControllers.favoriteAnItem
-);
+router.put("/:id/favorite", usersControllers.auth, itemsControllers.favoriteAnItem);
 
 module.exports = router;
