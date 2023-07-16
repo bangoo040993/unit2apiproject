@@ -51,7 +51,6 @@ test("it should get a user by id", async () => {
 
 test("it should return all users", async () => {
     const response = await request(app).get("/users");
-    console.log(response.body);
     expect(response.body.message).toBe("we in Neo");
 });
 
@@ -60,7 +59,6 @@ test("it should return a token if login is successful", async () => {
         email: "iDidNotKMS1@gmail.com",
         password: "sameforepstein",
     });
-    console.log(response.body);
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty("token");
 });
